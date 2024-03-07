@@ -1,6 +1,2 @@
-FROM ubuntu
-RUN apt update
-RUN apt install apache2 -y
-ADD . /var/www/html
-ENTRYPOINT apachectl -D FOREGROUND
-
+FROM ubuntu/online-shopping-system-advanced
+COPY online-shopping-system-advanced/admin/admin/index.php /var/www/php
